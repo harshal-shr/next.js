@@ -45,7 +45,6 @@ describe('pages/ error recovery', () => {
     if (isTurbopack) {
       await expect(browser).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Parsing ecmascript source code failed",
          "environmentLabel": null,
          "label": "Build Error",
@@ -59,7 +58,6 @@ describe('pages/ error recovery', () => {
     } else if (process.env.NEXT_RSPACK) {
       await expect({ browser, next }).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "  × Module build failed:",
          "environmentLabel": null,
          "label": "Build Error",
@@ -82,7 +80,6 @@ describe('pages/ error recovery', () => {
     } else {
       await expect(browser).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Error:   x Unexpected eof",
          "environmentLabel": null,
          "label": "Build Error",
@@ -162,7 +159,6 @@ describe('pages/ error recovery', () => {
 
     await expect(browser).toDisplayRedbox(`
      {
-       "count": 1,
        "description": "Error: oops",
        "environmentLabel": null,
        "label": "Runtime Error",
@@ -273,7 +269,6 @@ describe('pages/ error recovery', () => {
     } else {
       await expect(browser).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Error: oops",
          "environmentLabel": null,
          "label": "Runtime Error",
@@ -349,7 +344,6 @@ describe('pages/ error recovery', () => {
     if (isTurbopack) {
       await expect(browser).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Parsing ecmascript source code failed",
          "environmentLabel": null,
          "label": "Build Error",
@@ -363,7 +357,6 @@ describe('pages/ error recovery', () => {
     } else if (process.env.NEXT_RSPACK) {
       await expect({ browser, next }).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "  × Module build failed:",
          "environmentLabel": null,
          "label": "Build Error",
@@ -392,7 +385,6 @@ describe('pages/ error recovery', () => {
     } else {
       await expect(browser).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Error:   x Expected '{', got 'return'",
          "environmentLabel": null,
          "label": "Build Error",
@@ -437,7 +429,6 @@ describe('pages/ error recovery', () => {
     if (isTurbopack) {
       await expect(browser).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Parsing ecmascript source code failed",
          "environmentLabel": null,
          "label": "Build Error",
@@ -451,7 +442,6 @@ describe('pages/ error recovery', () => {
     } else if (process.env.NEXT_RSPACK) {
       await expect({ browser, next }).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "  × Module build failed:",
          "environmentLabel": null,
          "label": "Build Error",
@@ -481,7 +471,6 @@ describe('pages/ error recovery', () => {
     } else {
       await expect({ browser, next }).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Error:   x Expected '{', got 'throw'",
          "environmentLabel": null,
          "label": "Build Error",
@@ -554,7 +543,6 @@ describe('pages/ error recovery', () => {
       if (process.env.NEXT_RSPACK) {
         await expect(browser).toDisplayRedbox(`
          {
-           "count": 1,
            "description": "Error: nooo",
            "environmentLabel": null,
            "label": "Runtime Error",
@@ -569,7 +557,6 @@ describe('pages/ error recovery', () => {
       } else {
         await expect(browser).toDisplayRedbox(`
          {
-           "count": 1,
            "description": "Error: nooo",
            "environmentLabel": null,
            "label": "Runtime Error",
@@ -656,7 +643,6 @@ describe('pages/ error recovery', () => {
     } else {
       await expect(browser).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "ReferenceError: React is not defined",
          "environmentLabel": null,
          "label": "Runtime Error",
@@ -724,7 +710,6 @@ describe('pages/ error recovery', () => {
     if (process.env.NEXT_RSPACK) {
       await expect(browser).toDisplayRedbox(`
             {
-              "count": 1,
               "description": "Error: no 1",
               "environmentLabel": null,
               "label": "Runtime Error",
@@ -739,7 +724,6 @@ describe('pages/ error recovery', () => {
     } else {
       await expect(browser).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Error: no 1",
          "environmentLabel": null,
          "label": "Runtime Error",
@@ -773,7 +757,6 @@ describe('pages/ error recovery', () => {
 
       await expect(browser).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Parsing ecmascript source code failed",
          "environmentLabel": null,
          "label": "Build Error",
@@ -787,7 +770,6 @@ describe('pages/ error recovery', () => {
     } else if (process.env.NEXT_RSPACK) {
       await expect({ browser, next }).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "  × Module build failed:",
          "environmentLabel": null,
          "label": "Build Error",
@@ -814,7 +796,6 @@ describe('pages/ error recovery', () => {
     } else {
       await expect(browser).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Error:   x Expected '}', got '<eof>'",
          "environmentLabel": null,
          "label": "Build Error",
@@ -844,7 +825,6 @@ describe('pages/ error recovery', () => {
       // TODO: Remove this branching once import traces are implemented in Turbopack
       await expect(browser).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Parsing ecmascript source code failed",
          "environmentLabel": null,
          "label": "Build Error",
@@ -858,7 +838,6 @@ describe('pages/ error recovery', () => {
     } else if (process.env.NEXT_RSPACK) {
       await expect({ browser, next }).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "  × Module build failed:",
          "environmentLabel": null,
          "label": "Build Error",
@@ -885,7 +864,6 @@ describe('pages/ error recovery', () => {
     } else {
       await expect({ browser, next }).toDisplayRedbox(`
        {
-         "count": 1,
          "description": "Error:   x Expected '}', got '<eof>'",
          "environmentLabel": null,
          "label": "Build Error",

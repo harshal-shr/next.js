@@ -97,8 +97,9 @@ describe('Error overlay for hydration errors in Pages router', () => {
       `)
     } else {
       await expect(browser).toDisplayRedbox(`
-       {
-         "componentStack": "...
+       [
+         {
+           "componentStack": "...
            <AppContainer>
              <Container fn={function fn}>
                <PagesDevOverlay>
@@ -112,18 +113,18 @@ describe('Error overlay for hydration errors in Pages router', () => {
        -                     server
                      ...
                  ...",
-         "count": 1,
-         "description": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:",
-         "environmentLabel": null,
-         "label": "Runtime Error",
-         "source": "index.js (5:9) @ Mismatch
+           "description": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:",
+           "environmentLabel": null,
+           "label": "Runtime Error",
+           "source": "index.js (5:9) @ Mismatch
        > 5 |         <main className="child">{isClient ? "client" : "server"}</main>
            |         ^",
-         "stack": [
-           "main <anonymous> (0:0)",
-           "Mismatch index.js (5:9)",
-         ],
-       }
+           "stack": [
+             "main <anonymous> (0:0)",
+             "Mismatch index.js (5:9)",
+           ],
+         },
+       ]
       `)
     }
 
@@ -199,7 +200,6 @@ describe('Error overlay for hydration errors in Pages router', () => {
        +                   <main className="only">
                      ...
                  ...",
-         "count": 1,
          "description": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:",
          "environmentLabel": null,
          "label": "Runtime Error",
@@ -275,7 +275,6 @@ describe('Error overlay for hydration errors in Pages router', () => {
                            ...
                      ...
                  ...",
-         "count": 1,
          "description": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:",
          "environmentLabel": null,
          "label": "Runtime Error",
@@ -341,7 +340,6 @@ describe('Error overlay for hydration errors in Pages router', () => {
        -                   <main className="only">
                      ...
                  ...",
-         "count": 1,
          "description": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:",
          "environmentLabel": null,
          "label": "Runtime Error",
@@ -405,7 +403,6 @@ describe('Error overlay for hydration errors in Pages router', () => {
        -                   only
                      ...
                  ...",
-         "count": 1,
          "description": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:",
          "environmentLabel": null,
          "label": "Runtime Error",
@@ -481,7 +478,6 @@ describe('Error overlay for hydration errors in Pages router', () => {
        -                 test
                      ...
                  ...",
-         "count": 1,
          "description": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:",
          "environmentLabel": null,
          "label": "Runtime Error",
@@ -551,7 +547,6 @@ describe('Error overlay for hydration errors in Pages router', () => {
        -                 {" 123"}
                      ...
                  ...",
-         "count": 1,
          "description": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:",
          "environmentLabel": null,
          "label": "Runtime Error",
@@ -629,7 +624,6 @@ describe('Error overlay for hydration errors in Pages router', () => {
                          ...
                  ...
              ...",
-         "count": 1,
          "description": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:",
          "environmentLabel": null,
          "label": "Runtime Error",
@@ -732,7 +726,6 @@ describe('Error overlay for hydration errors in Pages router', () => {
        >                   <p>
                      ...
                  ...",
-         "count": 1,
          "description": "In HTML, <p> cannot be a descendant of <p>.
        This will cause a hydration error.",
          "environmentLabel": null,
@@ -809,7 +802,6 @@ describe('Error overlay for hydration errors in Pages router', () => {
        >                     <div>
                    ...
                ...",
-         "count": 1,
          "description": "In HTML, <div> cannot be a descendant of <p>.
        This will cause a hydration error.",
          "environmentLabel": null,
@@ -876,7 +868,6 @@ describe('Error overlay for hydration errors in Pages router', () => {
        >                   <tr>
                      ...
                  ...",
-         "count": 1,
          "description": "In HTML, <tr> cannot be a child of <div>.
        This will cause a hydration error.",
          "environmentLabel": null,
@@ -953,7 +944,6 @@ describe('Error overlay for hydration errors in Pages router', () => {
        >                           <p>
                      ...
                  ...",
-         "count": 1,
          "description": "In HTML, <p> cannot be a descendant of <p>.
        This will cause a hydration error.",
          "environmentLabel": null,

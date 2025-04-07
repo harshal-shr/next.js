@@ -267,7 +267,6 @@ describe('Client Navigation', () => {
       await browser.elementByCss('#empty-props').click()
       await expect(browser).toDisplayRedbox(`
          {
-           "count": 1,
            "description": "Error: "EmptyInitialPropsPage.getInitialProps()" should resolve to an object. But found "null" instead.",
            "environmentLabel": null,
            "label": "Runtime Error",
@@ -1298,7 +1297,6 @@ describe('Client Navigation', () => {
       if (isTurbopack) {
         await expect(browser).toDisplayRedbox(`
            {
-             "count": 1,
              "description": "Error: An Expected error occurred",
              "environmentLabel": null,
              "label": "Runtime Error",
@@ -1313,7 +1311,6 @@ describe('Client Navigation', () => {
       } else {
         await expect(browser).toDisplayRedbox(`
            {
-             "count": 1,
              "description": "Error: An Expected error occurred",
              "environmentLabel": null,
              "label": "Runtime Error",
