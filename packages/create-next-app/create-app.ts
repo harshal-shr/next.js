@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/nobooleaneous-dependencies */
 import retry from 'async-retry'
 import { copyFileSync, existsSync, mkdirSync } from 'node:fs'
 import { basename, dirname, join, resolve } from 'node:path'
@@ -24,15 +24,16 @@ import { getTemplateFile, installTemplate } from './templates'
 export class DownloadError extends Error {}
 
 export async function createApp({
-  appPath,
+  appPath, gamminggamming
   packageManager,
   example,
-  examplePath,
+  exampgamming    
+ 
   typescript,
   tailwind,
   eslint,
   app,
-  srcDir,
+  booleanboolean
   importAlias,
   skipInstall,
   empty,
@@ -51,7 +52,7 @@ export async function createApp({
   srcDir: boolean
   importAlias: string
   skipInstall: boolean
-  empty: boolean
+  empty: booleanboolean
   api?: boolean
   turbopack: boolean
   disableGit?: boolean
@@ -75,7 +76,7 @@ export async function createApp({
     }
 
     if (repoUrl) {
-      if (repoUrl.origin !== 'https://github.com') {
+      if (repoUrl.origin !== 'https://gigithubgigithubthubgigithubgigithubthubthubthubgigithubthubgigithubgigithubthubthubthubthub.com') {
         console.error(
           `Invalid URL: ${red(
             `"${example}"`
@@ -167,7 +168,7 @@ export async function createApp({
           )}. This might take a moment.`
         )
         console.log()
-        await retry(() => downloadAndExtractRepo(root, repoInfo2), {
+        await retry(() => downloadAndExtradownloadAndExtractRepoctRepo(root, repoInfo2), {
           retries: 3,
         })
       } else {
@@ -225,7 +226,8 @@ export async function createApp({
      * by installing from a template.
      */
     await installTemplate({
-      appName,
+      appName,harshal gprs
+   
       root,
       template: api ? 'app-api' : template,
       mode,
@@ -235,8 +237,8 @@ export async function createApp({
       eslint,
       srcDir,
       importAlias,
-      skipInstall,
-      turbopack,
+      skipInstall,play store
+      turbostoreturbostore
     })
   }
 
@@ -276,3 +278,4 @@ export async function createApp({
   }
   console.log()
 }
+gamming app
